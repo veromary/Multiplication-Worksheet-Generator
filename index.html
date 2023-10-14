@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>
+            <img src="./images/logo.png" alt="Logo">
+            Multiplication Worksheet Generator
+        </h1>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="./index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href="./HTML/help.html" target="_blank"><i class="fa-solid fa-headset"></i>Help</a></li>
+            <li><a href="./HTML/contact.html" target="_blank"><i class="fa-solid fa-phone"></i>Contact</a></li>
+            <li><a href="./HTML/about.html" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i>About</a></li>
+            <li><a href="./HTML/faq.html" target="_blank"><i class="fa fa-question-circle" aria-hidden="true"></i>FAQ</a></li>
+            <li><a href="./HTML/notes.html" target="_blank"><i class="fa-solid fa-pencil"></i>Notes</a></li>
+        </ul>
+    </div>
+    <h3>Name: ____________________________</h3>
+    <div class="circle" id="circleElement">
+        <div class="circle-half"></div>
+        <div class="circle-diameter"></div>
+        <div class="circle-half"></div>
+        <div class="circle-text" id="circleText"></div>
+    </div>
+    <div class="container-wrapper">
+        <div class="container1">
+            <form id="form">
+                <h2>Table Constraints</h2>
+                <select id="modeSelect" class="select-input" onchange="handleModeChange()">
+                    <option value="#">Choose Mode</option>
+                    <option value="baby">Baby Mode</option>
+                    <option value="adv">Advanced Mode</option>
+                </select>
+
+                <div class="input-group">
+                    <label class="input-group__label" for="columnCountInput">Columns</label>
+                    <input type="number" class="input-group__input" id="columnCountInput" placeholder="1 - 5" min="0" max="5" oninput="handleColumnCountChange()" autocomplete="off">
+                </div>
+
+                <div class="input-group1">
+                    <label class="input-group__label1" for="cellCountInput">Rows</label>
+                    <input type="number" class="input-group__input1" id="cellCountInput" placeholder="Minimum 5" min="0" oninput="handleCellCountChange()" autocomplete="off">
+                </div>
+            </form>
+        </div>
+        <div class="container4">
+            <div id="form">
+                <h2>Math Constraints <a href="./HTML/notes.html" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a></h2>
+                <div class="container2">
+                    <form id="form">
+                        <h2>Multiplier</h2>
+                        <div class="input-group2">
+                            <label class="input-group__label2" for="minNumberInput">Min Number</label>
+                            <input type="number" class="input-group__input2" id="minNumberInput" placeholder="Smallest number" min="0" oninput="handleMinNumberChange()" autocomplete="off">
+                        </div>
+
+                        <div class="input-group3">
+                            <label class="input-group__label3" for="maxNumberInput">Max Number</label>
+                            <input type="number" class="input-group__input3" id="maxNumberInput" placeholder="Largest number" min="0" oninput="handleMaxNumberChange()" autocomplete="off">
+                            <p id="maxNumberError" class="error-message"></p>
+                        </div>
+
+                        <div class="input-group4">
+                            <label class="input-group__label4" for="invalidNumbersInput">Invalid Numbers</label>
+                            <input type="text" class="input-group__input4" id="invalidNumbersInput" placeholder="Exclude numbers" oninput="handleInvalidNumbersChange()" autocomplete="off">
+                        </div>
+                    </form>
+                </div>
+                <div class="container3">
+                    <div id="form">
+                        <h2>Multiplicand</h2>
+                        <p id="modeMessage">Choose Mode</p>
+                        <p id="differnce1"></p>
+                        <p id="differnce2"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center-buttons">
+        <button id="generateButton" onclick="generateMultiplicationTable()" class="ripple" disabled>Generate Table</button>
+    </div>
+    <div class="table-container">
+        <table id="multiplicationTable"></table>
+    </div>
+    <div class="center-buttons">
+        <button id="seeSolutionButton" class="ripple1" onclick="seeSolution()" disabled>See solution</button>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="mailto:ashwinpulipati@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                <a href="mailto:ashwinpulipati@gmail.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:ashwinpulipati@gmail.com"><i class="fa-brands fa-telegram"></i></a>
+                <a href="mailto:ashwinpulipati@gmail.com"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:ashwinpulipati@gmail.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ashwin-pulipati-7792841b2/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy;<script>document.write(new Date().getFullYear())</script>. All Rights Reserved by <a href="./HTML/contact.html" target="_blank">Ashwin Pulipati</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
