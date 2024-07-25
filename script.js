@@ -258,13 +258,13 @@ function generateMultiplication() {
         formatIndex = Math.floor(Math.random() * 3);
         switch (formatIndex) {
             case 0:
-                format = num1 + " * " + num2 + " = ____";
+                format = num1 + " x " + num2 + " = ____";
                 break;
             case 1:
-                format = "____ * " + num2 + " = " + result;
+                format = "____ x " + num2 + " = " + result;
                 break;
             case 2:
-                format = num1 + " * ____ = " + result;
+                format = num1 + " x ____ = " + result;
                 break;
         }
     } else if (mode === "adv") {
@@ -285,13 +285,13 @@ function generateMultiplication() {
         formatIndex = Math.floor(Math.random() * 3);
         switch (formatIndex) {
             case 0:
-                format = num1 + " * " + num2 + " = ____";
+                format = num1 + " x " + num2 + " = ____";
                 break;
             case 1:
-                format = "____ * " + num2 + " = " + result;
+                format = "____ x " + num2 + " = " + result;
                 break;
             case 2:
-                format = num1 + " * ____ = " + result;
+                format = num1 + " x ____ = " + result;
                 break;
         }
     }
